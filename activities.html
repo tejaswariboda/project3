@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracurricular Activities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Extracurricular Activities</h2>
+
+    <!-- Form for adding new activity -->
+    <form action="addActivity" method="post">
+        <div>
+            <label for="name">Activity Name:</label>
+            <input type="text" name="name" placeholder="Activity Name" required>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea name="description" placeholder="Description" required></textarea>
+        </div>
+        <div>
+            <label for="start_date">Start Date:</label>
+            <input type="date" name="start_date" required>
+        </div>
+        <div>
+            <label for="end_date">End Date:</label>
+            <input type="date" name="end_date" required>
+        </div>
+        <div>
+            <label for="location">Location:</label>
+            <input type="text" name="location" placeholder="Location" required>
+        </div>
+        <div>
+            <label for="max_participants">Max Participants:</label>
+            <input type="number" name="max_participants" placeholder="Max Participants" required>
+        </div>
+        <button type="submit">Add Activity</button>
+    </form>
+
+    <h2>Current Activities</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Activity Name</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Location</th>
+                <th>Max Participants</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample data rows (replace with dynamic data from server) -->
+            <tr>
+                <td>Soccer Club</td>
+                <td>Weekly soccer matches for students.</td>
+                <td>2024-10-15</td>
+                <td>2024-12-15</td>
+                <td>Main Field</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Drama Society</td>
+                <td>Learn and perform plays.</td>
+                <td>2024-10-01</td>
+                <td>2024-12-01</td>
+                <td>Theatre Room</td>
+                <td>20</td>
+            </tr>
+            <!-- Additional activities would be added here -->
+        </tbody>
+    </table>
+
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="participation_history.html">Participation History</a>
+        <a href="notifications.html">Notifications</a>
+    </nav>
+</body>
+</html>

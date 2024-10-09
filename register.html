@@ -1,0 +1,31 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Activity</title>
+</head>
+<body>
+    <h1>Create a New Activity</h1>
+    <form action="ActivityServlet" method="post">
+        <label for="name">Activity Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required><br>
+
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location"><br>
+
+        <label for="max_participants">Max Participants:</label>
+        <input type="number" id="max_participants" name="max_participants" required><br>
+
+        <input type="submit" value="Create Activity">
+    </form>
+</body>
+</html>

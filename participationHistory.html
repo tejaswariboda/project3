@@ -1,0 +1,45 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Participation History</title>
+</head>
+<body>
+    <h1>Your Participation History</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Activity Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%
+                List<com.example.registration.Participation> participationList = (List<com.example.registration.Participation>) request.getAttribute("participationList");
+                if (participationList != null && !participationList.isEmpty()) {
+                    for (com.example.registration.Participation participation : participationList) {
+            %>
+                        <tr>
+                            <td><%= participation.getActivityName() %></td>
+                            <td><%= participation.getStartDate() %></td>
+                            <td><%= participation.getEndDate() %></td>
+                            <td><%= participation.getLocation() %></td>
+                        </tr>
+            <%
+                    }
+                } else {
+            %>
+                    <tr>
+                        <td colspan="4">No participation history found.</td>
+                    </tr>
+            <%
+                }
+            %>
+        </tbody>
+    </table>
+
+</body>
+</html>

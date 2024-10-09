@@ -1,0 +1,29 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container styles */
+.container {
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* Form element styles */
+input, button {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Link styles */
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
